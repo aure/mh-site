@@ -1,56 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Metronome Hero</title>
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: #0f0f1a;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #ffffff;
-    }
-
-    .container {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 6rem);
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      background: linear-gradient(135deg, #a78bfa, #60a5fa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-      color: #94a3b8;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metronome Hero — Coming April 4</title>
+    <meta name="description" content="The metronome that listens back. Real-time timing feedback, auto-tempo progression, and mic/MIDI input — on iPhone, iPad, Mac, Apple Watch, and inside your DAW. Launching April 4, 2026.">
+    <link rel="icon" type="image/png" href="appicon.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Metronome Hero</h1>
-    <p>Metronome Hero is a rhythm training app that scores your timing accuracy and helps you build rock-solid tempo.</p>
-    <p>Support: <a href="mailto:support@metronomehero.com">support@metronomehero.com</a></p>
-    <p>Press: <a href="mailto:press@metronomehero.com">press@metronomehero.com</a></p>
-  </div>
+
+<div class="prelaunch">
+    <div class="prelaunch-content">
+        <img src="appicon.png" alt="Metronome Hero" class="prelaunch-icon">
+        <h1>Metronome <span style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Hero</span></h1>
+        <p class="tagline">Metronome Hero is a rhythm training app that helps you build rock-solid rhythm.</p>
+        <div class="launch-date">
+            <div class="label">Launching</div>
+            <div class="date">4/4</div>
+            <div class="date">(April 4, 2026)</div>
+        </div>
+
+        <div class="prelaunch-links">
+            <a href="mailto:support@metronomehero.com">Support</a>
+            <a href="mailto:press@metronomehero.com">Press</a>
+        </div>
+
+        <div class="prelaunch-footer">
+            <div class="legal-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+            <p>&copy; 2026 AudioKit Pro</p>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
