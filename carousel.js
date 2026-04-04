@@ -106,19 +106,42 @@
     var list = document.getElementById('tipList');
     if (!carousel || !list) return;
 
-    var imgs = carousel.querySelectorAll('img');
+    var imgs = carousel.querySelectorAll('img[data-index]');
     var items = list.querySelectorAll('li[data-index]');
     var total = imgs.length;
     var current = 0;
     var timer;
     var hovering = false;
 
-    function show(idx) {
-        imgs[current].classList.remove('active');
-        items[current].classList.remove('active');
-        current = ((idx % total) + total) % total;
-        imgs[current].classList.add('active');
-        items[current].classList.add('active');
+    // Build lookup maps by data-index for non-sequential ordering
+    var imgMap = {};
+    var itemMap = {};
+    // Ordered list of data-index values matching image order (for auto-cycle)
+    var indexOrder = [];
+    imgs.forEach(function(img) {
+        var idx = img.dataset.index;
+        imgMap[idx] = img;
+        indexOrder.push(idx);
+    });
+    items.forEach(function(item) {
+        itemMap[item.dataset.index] = item;
+    });
+
+    function show(pos) {
+        // Deactivate current
+        var curIdx = indexOrder[current];
+        if (imgMap[curIdx]) imgMap[curIdx].classList.remove('active');
+        if (itemMap[curIdx]) itemMap[curIdx].classList.remove('active');
+        // Activate new
+        current = ((pos % total) + total) % total;
+        var newIdx = indexOrder[current];
+        if (imgMap[newIdx]) imgMap[newIdx].classList.add('active');
+        if (itemMap[newIdx]) itemMap[newIdx].classList.add('active');
+    }
+
+    function showByDataIndex(dataIdx) {
+        var pos = indexOrder.indexOf(dataIdx);
+        if (pos !== -1) show(pos);
     }
 
     function startTimer() {
@@ -130,7 +153,7 @@
     items.forEach(function(item) {
         item.addEventListener('mouseenter', function() {
             hovering = true;
-            show(parseInt(item.dataset.index));
+            showByDataIndex(item.dataset.index);
         });
         item.addEventListener('mouseleave', function() {
             hovering = false;
