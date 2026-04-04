@@ -3,38 +3,635 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metronome Hero — Coming April 4</title>
-    <meta name="description" content="The metronome that listens back. Real-time timing feedback, auto-tempo progression, and mic/MIDI input — on iPhone, iPad, Mac, Apple Watch, and inside your DAW. Launching April 4, 2026.">
-    <link rel="icon" type="image/png" href="appicon.png">
+    <title>Metronome Hero — The Metronome That Listens Back</title>
+    <meta name="description" content="Train your timing with real-time visual feedback, adaptive tempo progression, and tap, mic, or MIDI input — on iPhone, iPad, Mac, Apple Watch, and inside your DAW.">
+    <link rel="icon" type="image/png" href="images/appicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="prelaunch">
-    <div class="prelaunch-content">
-        <img src="appicon.png" alt="Metronome Hero" class="prelaunch-icon">
-        <h1>Metronome <span style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Hero</span></h1>
-        <p class="tagline">Metronome Hero is a rhythm training app that helps you build rock-solid rhythm.</p>
-        <div class="launch-date">
-            <div class="label">Launching</div>
-            <div class="date">4/4</div>
-            <div class="date">(April 4, 2026)</div>
+<!-- ── Nav ── -->
+<nav>
+    <div class="container">
+        <a href="#" class="nav-brand">
+            <img src="images/appicon.png" alt="Metronome Hero icon">
+            Metronome Hero
+        </a>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#visualizations">Visualizations</a></li>
+            <li><a href="#input">Input</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#platforms">Platforms</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+    <div class="container">
+        <img src="images/appicon.png" alt="Metronome Hero" class="hero-icon">
+        <h1>The metronome that <span>listens back.</span></h1>
+        <p class="hero-tagline">
+            Metronome Hero scores the hits and note attacks you play, shows where you land relative to the beat, and can automatically adjust the tempo to help you improve.
+        </p>
+        <div class="hero-cta">
+            <a href="https://apps.apple.com/us/app/metronome-hero/id6759626022" aria-label="Download on the App Store">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" style="height: 54px; width: auto;">
+            </a>
+            <a href="#features" class="btn btn-secondary">Learn More</a>
+        </div>
+        <div class="hero-screenshot" id="heroCarousel">
+            <img src="images/note-highway.png" alt="Note Highway visualization" class="active">
+            <img src="images/half-pipe.png" alt="Half-pipe visualization" loading="lazy">
+            <img src="images/playhead.png" alt="Playhead visualization" loading="lazy">
+            <img src="images/tube.png" alt="Tubular visualization" loading="lazy">
+            <img src="images/scrolling.png" alt="Scrolling History visualization" loading="lazy">
+            <img src="images/circle.png" alt="Circular visualization" loading="lazy">
+        </div>
+        <div class="viz-showcase-label" id="heroLabel">Note Highway</div>
+    </div>
+</section>
+
+<!-- ── Wave ── -->
+<div class="wave-divider">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#111118"/>
+    </svg>
+</div>
+
+<!-- ── Scoring ── -->
+<section id="features">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Precision Scoring</span>
+            <h2>See where you land</h2>
+            <p>Rush a note and you see it instantly &mdash; while your hands still remember the mistake. No listening back to a recording. No waiting for someone to tell you. You feel it and you see it at the same time.</p>
+            <p style="margin-top: 1rem;">A 7-zone timing spectrum tells you not just whether you&rsquo;re on beat, but how far off and in which direction.</p>
         </div>
 
-        <div class="prelaunch-links">
-            <a href="mailto:support@metronomehero.com">Support</a>
-            <a href="mailto:press@metronomehero.com">Press</a>
+        <div class="spectrum-bar">
+            <div class="zone" style="background: #EF4444;">Rushing</div>
+            <div class="zone" style="background: #FF8F41;">Early</div>
+            <div class="zone" style="background: #FDD01C;">OK</div>
+            <div class="zone" style="background: #34D399; flex: 1.2;">Pocket</div>
+            <div class="zone" style="background: #59A9FF;">OK</div>
+            <div class="zone" style="background: #5F73FF;">Late</div>
+            <div class="zone" style="background: #9D47DF;">Dragging</div>
         </div>
 
-        <div class="prelaunch-footer">
-            <div class="legal-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-of-service.html">Terms of Service</a>
-            </div>
-            <p>&copy; 2026 AudioKit Pro</p>
+        <div class="screenshot-showcase">
+            <img src="images/playhead.png" alt="Playhead view showing color-coded hit bars across the timing spectrum">
+        </div>
+
+        <div class="tip-callout">
+            <h4>Play musically, not mechanically</h4>
+            <p>Setting the quantization to sixteenths doesn&rsquo;t mean you have to play every sixteenth note. Play your own rhythms &mdash; long notes, short notes, rests, syncopation. Metronome Hero only scores the notes you actually play. Take a breath, leave space, be musical. All that matters is that when you do play, you&rsquo;re on beat.</p>
         </div>
     </div>
+</section>
+
+<!-- ── Features ── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Features</span>
+            <h2>Everything you need to level up</h2>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Directional Feedback</h3>
+                <p>See that you consistently rush the backbeat, or lay back on beat 3. That specificity turns repetition into improvement.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Fight the Rush</h3>
+                <p>Rushing is the most common timing problem &mdash; and the hardest to feel yourself doing. Metronome Hero skews its hit zones so that laying back is scored more generously than pushing ahead. Over time, this trains you into the pocket naturally, without thinking about it.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Accuracy &amp; Consistency</h3>
+                <p>Two independent metrics track your playing. Accuracy measures how close each hit lands to the beat. Consistency measures how steady you are over time. Five difficulty levels &mdash; from Chill to Pro &mdash; tighten both thresholds.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Musical Tap Sounds</h3>
+                <p>Every tap or MIDI hit can trigger a musical note. Choose from 10 instrument voices or 8 drum sounds. Set a chord voicing so each beat lands on the same notes, reinforcing your timing.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Session Tracking</h3>
+                <p>Every session records accuracy, rating distribution, tempo progression, best streak, and duration. Review history on a practice calendar with iCloud sync.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Flexible Time Signatures</h3>
+                <p>Practice in anything from 1/4 through 5/4, plus 6/8 through 16/8. Add subdivisions from eighths to thirty-seconds and swing feel from subtle to hard shuffle.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Visualizations ── -->
+<section id="visualizations">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Six Visualizations</span>
+            <h2>See your rhythm, your way</h2>
+            <p>Each view shows your timing accuracy differently &mdash; some zoom into every hit, others reveal patterns over time. Tap to switch mid-session or set auto-cycling on level changes.</p>
+        </div>
+
+        <div class="viz-grid">
+            <div class="viz-card">
+                <img src="images/note-highway.png" alt="Note highway 3D visualization">
+                <div class="viz-body">
+                    <h3>Note Highway</h3>
+                    <p>A 3D perspective view where the horizontal axis is your timing — very early on the left, pocket in the center, very late on the right. Hits recede into the distance as new ones arrive.</p>
+                </div>
+            </div>
+            <div class="viz-card">
+                <img src="images/half-pipe.png" alt="Half-pipe parabolic visualization">
+                <div class="viz-body">
+                    <h3>Half-pipe</h3>
+                    <p>A parabolic curve where hits roll toward the center when you&rsquo;re in the pocket and climb the walls when you rush or drag. The shape makes timing feel physical &mdash; like a skateboard half-pipe.</p>
+                </div>
+            </div>
+            <div class="viz-card">
+                <img src="images/playhead.png" alt="Playhead visualization">
+                <div class="viz-body">
+                    <h3>Playhead</h3>
+                    <p>A sweeping bar moves left to right. The vertical axis is your timing — early notes appear above the center line, late notes below. Simple, clear, immediate.</p>
+                </div>
+            </div>
+            <div class="viz-card">
+                <img src="images/scrolling.png" alt="Scrolling history visualization">
+                <div class="viz-body">
+                    <h3>Scrolling History</h3>
+                    <p>A scrolling timeline where the vertical axis shows your timing — early notes rise above the center, late notes fall below. Watch your rhythmic tendencies emerge over time.</p>
+                </div>
+            </div>
+            <div class="viz-card">
+                <img src="images/tube.png" alt="Tubular polar-coordinate visualization">
+                <div class="viz-body">
+                    <h3>Tubular</h3>
+                    <p>The largest area devoted to the timing axis, mapped around the circumference of a circle. The most visually immediate view — you can see exactly where in each accuracy zone every hit lands.</p>
+                </div>
+            </div>
+            <div class="viz-card">
+                <img src="images/circle.png" alt="Circular playhead visualization with wave effects">
+                <div class="viz-body">
+                    <h3>Circular</h3>
+                    <p>A radial clock-face sweep with rippling wave effects. Instead of a zoomed timing axis, it shows the most notes at once — beautiful patterns that reveal your overall consistency.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Wave ── -->
+<div class="wave-divider flip">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#111118"/>
+    </svg>
 </div>
+
+<!-- ── Level Up ── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Adaptive Tempo</span>
+            <h2>Level up &mdash; and level down</h2>
+            <p>It gets harder as you get better, and easier when you struggle. Automatically.</p>
+        </div>
+
+        <div class="meter-demo">
+            <div class="meter-bar">
+                <span class="meter-label">ACCURACY</span>
+                <div class="meter-track"><div class="meter-fill"></div></div>
+            </div>
+            <div class="meter-bar">
+                <span class="meter-label">CONSISTENCY</span>
+                <div class="meter-track"><div class="meter-fill"></div></div>
+            </div>
+        </div>
+        <p style="text-align: center; font-size: 0.85rem; color: var(--text-dim); margin-top: -1.5rem; margin-bottom: 1rem;">
+            Two independent meters track your performance in real time &mdash; accuracy measures how close you land to the beat, consistency measures how steady you are over time.
+        </p>
+
+        <div class="feature-grid level-grid" style="margin-top: 2rem;">
+            <div class="feature-card">
+                <h3>Level Up</h3>
+                <p>When your accuracy, consistency, or both cross the threshold, the tempo bumps up automatically. Choose which metric drives progression &mdash; or require both for the ultimate challenge.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Click Sound Randomization</h3>
+                <p>The click sound changes every time you level up or down &mdash; an unmistakable auditory signal that something just shifted, even when you&rsquo;re not watching the screen. It also prevents ear fatigue during long sessions.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Level Down</h3>
+                <p>When your metrics drop below the threshold, the tempo backs off. No shame &mdash; it&rsquo;s smart practice. Spend more time at tempos where you&rsquo;re challenged but not overwhelmed.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Interval Training for Rhythm</h3>
+                <p>Combine level up with level down and you get interval training &mdash; the tempo pushes you to your edge, backs off to let you recover, then pushes again. Your comfortable tempo climbs session after session.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Session Summary ── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Track Progress</span>
+            <h2>Every session tells a story</h2>
+        </div>
+
+        <div class="session-row">
+            <div class="session-img viz-showcase" id="sessionCarousel">
+                <img src="images/session-summaries/accuracy-beginner-to-pro.png" class="active" alt="Accuracy Beginner To Pro session summary">
+                <img src="images/session-summaries/same-beat-easy-medium-hard.png" alt="Same Beat on Easy Medium and Hard session summary">
+                <img src="images/session-summaries/def-leppard-riff.png" alt="Def Leppard Riff session summary">
+                <img src="images/session-summaries/drumming-practice.png" alt="Drumming Practice session summary">
+                <img src="images/session-summaries/daily-3-finger-drill.png" alt="Daily 3 Finger Drill session summary">
+                <img src="images/session-summaries/fingerpicking-songs.png" alt="Fingerpicking Songs session summary">
+                <img src="images/session-summaries/fingerpicking-drills.png" alt="Fingerpicking Drills session summary">
+            </div>
+            <div class="session-text">
+                <h3>Detailed Session Summary</h3>
+                <p>When you stop, Metronome Hero shows you exactly how the session went.</p>
+                <ul>
+                    <li>Duration, total hits, and overall accuracy</li>
+                    <li>Rating distribution across all 7 zones</li>
+                    <li>Tempo progression graph showing every level change</li>
+                    <li>Accuracy, consistency, and difficulty settings</li>
+                    <li>Practice calendar stored on iCloud &mdash; tap on your phone on the way to work, clap on your iPad, play MIDI guitar on your Mac, and it all ends up in the same place</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Input Modes ── -->
+<section id="input">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Any Instrument</span>
+            <h2>Play any instrument. Three ways in.</h2>
+            <p>Tap the screen, use your microphone or audio interface, or connect a MIDI controller.</p>
+        </div>
+
+        <div class="input-modes">
+            <div class="input-mode">
+                <div class="mode-icon">&#128400;</div>
+                <div>
+                    <h3>Tap</h3>
+                    <p>Tap the screen, click the mouse, or press keyboard keys. Perfect for percussion fundamentals and warming up anywhere.</p>
+                </div>
+            </div>
+            <div class="input-mode">
+                <div class="mode-icon">&#127908;</div>
+                <div>
+                    <h3>Audio</h3>
+                    <p>Use the built-in microphone or plug in your audio interface. Play drums, guitar, piano, voice &mdash; anything with a clear attack. Adaptive auto-gain handles sensitivity automatically, and latency calibration helps line up what you hear with what gets scored.</p>
+                </div>
+            </div>
+            <div class="input-mode">
+                <div class="mode-icon">&#127929;</div>
+                <div>
+                    <h3>MIDI</h3>
+                    <p>Connect any MIDI controller via Bluetooth or USB. Keyboards, drum pads, electronic kits &mdash; play your own instrument and let Metronome Hero score your timing with the most direct input path.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Challenges ── -->
+<section id="challenges">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Practice Tools</span>
+            <h2>Challenges that build real musicians</h2>
+            <p>Professional practice techniques built right into the app.</p>
+        </div>
+
+        <div class="challenge-grid">
+            <div class="challenge-item">
+                <h3>Play / Mute Cycling</h3>
+                <p>Alternate between measures with clicks and measures of silence. When the clicks come back, are you still in time?</p>
+            </div>
+            <div class="challenge-item">
+                <h3>Backbeat Only</h3>
+                <p>In 4/4, only beats 2 and 4 play. The pocket. The groove. Train what matters most.</p>
+            </div>
+            <div class="challenge-item">
+                <h3>Random Click Drop</h3>
+                <p>Up to 50% of beats go silent. Can you hold steady when the safety net disappears? Forces you to internalize the pulse.</p>
+            </div>
+            <div class="challenge-item">
+                <h3>Progressive Click Drop</h3>
+                <p>Each level-up removes more clicks from the pattern. Combined with auto-tempo, a practice session that evolves with you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Platforms ── -->
+<section id="platforms">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Everywhere You Practice</span>
+            <h2>One app. Every Apple device.</h2>
+            <p>Metronome Hero meets you wherever you practice. All your sessions are stored on iCloud, so every device shares the same practice history.</p>
+        </div>
+
+        <div class="platform-grid">
+            <div class="platform-card-img">
+                <div class="platform-img-area">
+                    <img src="images/phone.png" alt="Metronome Hero on iPhone in landscape showing Scrolling History view">
+                </div>
+                <div class="platform-body">
+                    <h3>iPhone, iPad &amp; Mac</h3>
+                    <p>Full-featured rhythm training with touch, audio, or MIDI input. Portrait and landscape. Session recording with camera overlay on iPhone. Native Mac app with keyboard, mouse, and MIDI input.</p>
+                </div>
+            </div>
+            <div class="platform-card-img">
+                <div class="platform-img-area watch-area">
+                    <img src="images/watch-circle.png" alt="Metronome Hero on Apple Watch showing circular visualization">
+                </div>
+                <div class="platform-body">
+                    <h3>Apple Watch</h3>
+                    <p>A fully independent rhythm trainer on your wrist. All six visualizations, digital crown controls, and its own level meter.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Plays Well With Others ── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Plays Well With Others</span>
+            <h2>Connect with your whole setup</h2>
+            <p>Load Metronome Hero as an Audio Unit plugin in your DAW, hit play on a backing track, and practice with host-synced timing feedback. The plugin follows the host transport and scores incoming MIDI performance.</p>
+        </div>
+
+        <div class="viz-showcase" id="auv3Carousel">
+            <img src="images/auv3-loopy.png" class="active" alt="Metronome Hero AUv3 plugin running inside Loopy Pro">
+            <img src="images/auv3-logic-ipad.png" alt="Metronome Hero AUv3 plugin running inside Logic Pro on iPad">
+            <img src="images/auv3-aum.png" alt="Metronome Hero AUv3 plugin running inside AUM">
+            <img src="images/auv3-logic-mac.png" alt="Metronome Hero AUv3 plugin running inside Logic Pro on Mac">
+        </div>
+        <p class="viz-showcase-label" id="auv3Label">Loopy Pro</p>
+
+        <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap;">
+            <img src="images/daws.png" alt="Compatible DAW hosts: GarageBand, Logic Pro, AUM, Loopy Pro" style="max-width: 400px; width: 100%; height: auto; border-radius: 16px;">
+        </div>
+        <p style="text-align: center; font-size: 0.9rem; color: var(--text-dim); margin-top: 1rem;">
+            Works with Logic Pro, GarageBand, AUM, Loopy Pro, and other Audio Unit hosts that support the plugin format.
+        </p>
+
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 3rem; flex-wrap: wrap;">
+            <img src="images/ableton-link.png" alt="Ableton Link" style="height: 40px; border-radius: 8px;">
+        </div>
+        <p style="text-align: center; max-width: 560px; margin: 1rem auto 0;">
+            Sync tempo across every app on your network with Ableton Link. When Metronome Hero changes tempo &mdash; auto level-up, level-down, or manual &mdash; every connected app follows instantly.
+        </p>
+    </div>
+</section>
+
+<!-- ── Band Sync ── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Band Sync</span>
+            <h2>Practice together. Score together.</h2>
+            <p>Connect multiple devices on the same local network and practice as a band &mdash; everyone stays on the same tempo grid and gets scored individually. On iPhone and iPad, Band Sync uses Ableton Link for timing.</p>
+        </div>
+
+        <div class="session-row">
+            <div class="session-img viz-showcase" id="bandsyncCarousel">
+                <img src="images/bandsync-playing.png" class="active" alt="Band Sync session in progress with Note Highway visualization">
+                <img src="images/bandsync-results.png" alt="Band Results showing scores, rankings, and You vs Band chart">
+            </div>
+            <div class="session-text">
+                <h3>Band Session Results</h3>
+                <p>After a band session, see how everyone performed &mdash; individually and as a group.</p>
+                <ul>
+                    <li>Band score based on the group&rsquo;s combined accuracy</li>
+                    <li>Individual rankings with pocket counts</li>
+                    <li>&ldquo;You vs Band&rdquo; comparative chart across all timing zones</li>
+                    <li>Top performer and most-in-the-pocket awards</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Who Is This For ── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">For Every Musician</span>
+            <h2>Who is this for?</h2>
+        </div>
+
+        <div class="who-grid">
+            <div class="who-item">
+                <div class="who-icon">&#129345;</div>
+                <p><strong>Drummers</strong> who want objective feedback on timing consistency</p>
+            </div>
+            <div class="who-item">
+                <div class="who-icon">&#127928;</div>
+                <p><strong>Guitarists &amp; bassists</strong> training to lock in with a drummer or click track</p>
+            </div>
+            <div class="who-item">
+                <div class="who-icon">&#128257;</div>
+                <p><strong>Loopers</strong> who need every layer tight &mdash; one sloppy pass and the whole loop drifts</p>
+            </div>
+            <div class="who-item">
+                <div class="who-icon">&#127929;</div>
+                <p><strong>Pianists</strong> working on rhythmic independence between hands</p>
+            </div>
+            <div class="who-item">
+                <div class="who-icon">&#127979;</div>
+                <p><strong>Music teachers</strong> who want to show students how using a metronome can be fun</p>
+            </div>
+            <div class="who-item">
+                <div class="who-icon">&#127891;</div>
+                <p><strong>Music students</strong> preparing for auditions and ensemble placements</p>
+            </div>
+            <div class="who-item">
+                <div class="who-icon">&#127908;</div>
+                <p><strong>Vocalists</strong> practicing diction, consonant attacks, and lip/tongue exercises right on the beat</p>
+            </div>
+            <div class="who-item">
+                <div class="who-icon">&#128131;</div>
+                <p><strong>Dancers</strong> training rhythmic precision &mdash; especially styles with clapping like flamenco</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Built-in Tips ── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Built-in Tips</span>
+            <h2>Learn as you play</h2>
+            <p>Built-in tip cards cover difficulty levels, time signatures, swing feel, DAW integration, and more. Tap through them at your own pace.</p>
+        </div>
+
+        <div class="tip-browser" id="tipBrowser">
+            <div class="tip-list" id="tipList">
+                <div class="tip-group">
+                    <h4 class="tip-group-label">Getting Started</h4>
+                    <ul>
+                        <li class="active" data-index="0">Tap Play to Start</li>
+                        <li data-index="1">See Your Timing</li>
+                        <li data-index="2">Set Your Tempo</li>
+                        <li data-index="3">Three Ways to Play</li>
+                        <li data-index="4">Choose Your Difficulty</li>
+                        <li data-index="5">Play Musically</li>
+                        <li data-index="7">Calibrate Audio Latency</li>
+                    </ul>
+                </div>
+                <div class="tip-group">
+                    <h4 class="tip-group-label">Practice Tools</h4>
+                    <ul>
+                        <li data-index="6">Six Visualizations</li>
+                        <li data-index="19">Auto-Cycle Views</li>
+                        <li data-index="8">Muting &amp; Internalization</li>
+                        <li data-index="9">Level Up Automatically</li>
+                        <li data-index="10">Level Down on Slumps</li>
+                        <li data-index="11">Time Signatures</li>
+                        <li data-index="12">Subdivisions</li>
+                        <li data-index="13">Swing Feel</li>
+                    </ul>
+                </div>
+                <div class="tip-group">
+                    <h4 class="tip-group-label">Customize &amp; Connect</h4>
+                    <ul>
+                        <li data-index="14">Presets</li>
+                        <li data-index="15">Sounds &amp; Instruments</li>
+                        <li data-index="16">Click Sounds</li>
+                        <li data-index="17">Share Your Sessions</li>
+                        <li data-index="18">Session History</li>
+                        <li data-index="20">Use It in Your DAW</li>
+                        <li data-index="21">Practice on Your Wrist</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tip-browser-image">
+                <div class="tip-carousel" id="tipCarousel">
+                    <img src="images/tips/tip-tap-play.png" alt="Tap Play to Start tip" class="active" data-index="0">
+                    <img src="images/tips/tip-see-your-timing.png" alt="See Your Timing tip" data-index="1">
+                    <img src="images/tips/tip-set-tempo.png" alt="Set Your Tempo tip" data-index="2">
+                    <img src="images/tips/tip-three-ways.png" alt="Three Ways to Play tip" data-index="3">
+                    <img src="images/tips/tip-difficulty.png" alt="Choose Your Difficulty tip" data-index="4">
+                    <img src="images/tips/tip-play-musically.png" alt="Play Musically tip" data-index="5">
+                    <img src="images/tips/tip-visualizations.png" alt="Six Visualizations tip" data-index="6">
+                    <img src="images/tips/tip-calibration.png" alt="Calibrate Audio Latency tip" data-index="7">
+                    <img src="images/tips/tip-muting.png" alt="Muting &amp; Internalization tip" data-index="8">
+                    <img src="images/tips/tip-level-up.png" alt="Level Up Automatically tip" data-index="9">
+                    <img src="images/tips/tip-level-down.png" alt="Level Down on Slumps tip" data-index="10">
+                    <img src="images/tips/tip-time-signatures.png" alt="Time Signatures tip" data-index="11">
+                    <img src="images/tips/tip-subdivisions.png" alt="Subdivisions tip" data-index="12">
+                    <img src="images/tips/tip-swing.png" alt="Swing Feel tip" data-index="13">
+                    <img src="images/tips/tip-presets.png" alt="Presets tip" data-index="14">
+                    <img src="images/tips/tip-sounds.png" alt="Sounds &amp; Instruments tip" data-index="15">
+                    <img src="images/tips/tip-click-sounds.png" alt="Click Sounds tip" data-index="16">
+                    <img src="images/tips/tip-share-sessions.png" alt="Share Your Sessions tip" data-index="17">
+                    <img src="images/tips/tip-session-history.png" alt="Session History tip" data-index="18">
+                    <img src="images/tips/tip-auto-cycle.png" alt="Auto-Cycle Views tip" data-index="19">
+                    <img src="images/tips/tip-daw.png" alt="Use It in Your DAW tip" data-index="20">
+                    <img src="images/tips/tip-watch.png" alt="Practice on Your Wrist tip" data-index="21">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="carousel.js"></script>
+
+<!-- ── Video Tutorial ── -->
+<section id="tutorial" style="padding: 5rem 0; background: var(--bg-dark);">
+    <div class="container" style="text-align: center;">
+        <h2>Video Tutorial</h2>
+        <p style="max-width: 520px; margin: 0.5rem auto 2rem; color: var(--text-muted);">A complete walkthrough of every feature — from your first tap to advanced practice tools.</p>
+        <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 30px rgba(0,0,0,0.4);">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2stpJYi7EqM?si=vIn6x9kGSVwRwslx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: block;"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ── Built For Serious Practice ── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Under the Hood</span>
+            <h2>Built for serious practice</h2>
+        </div>
+
+        <div class="specs-grid">
+            <div class="spec-item">
+                <span class="check">&#10003;</span>
+                <p>Sub-millisecond beat timing via <code style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85em;">mach_absolute_time</code></p>
+            </div>
+            <div class="spec-item">
+                <span class="check">&#10003;</span>
+                <p>Selectable click sounds and 10 curated instrument voices for tap feedback</p>
+            </div>
+            <div class="spec-item">
+                <span class="check">&#10003;</span>
+                <p>Preset system &mdash; save complete practice configurations</p>
+            </div>
+            <div class="spec-item">
+                <span class="check">&#10003;</span>
+                <p>Time signatures: 1/4 through 5/4, plus 6/8 through 16/8</p>
+            </div>
+            <div class="spec-item">
+                <span class="check">&#10003;</span>
+                <p>Swing control: 0&ndash;33% for jazz, Latin, and shuffle styles</p>
+            </div>
+            <div class="spec-item">
+                <span class="check">&#10003;</span>
+                <p>Adaptive audio auto-gain for built-in mics and audio interfaces, with manual latency calibration when needed</p>
+            </div>
+            <div class="spec-item">
+                <span class="check">&#10003;</span>
+                <p>iCloud session sync across all devices</p>
+            </div>
+            <div class="spec-item">
+                <span class="check">&#10003;</span>
+                <p>Pause and resume &mdash; review mid-session, then continue</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── CTA ── -->
+<section style="padding: 6rem 0; background: radial-gradient(ellipse at 50% 100%, rgba(52, 211, 153, 0.06) 0%, transparent 60%), var(--bg-dark);">
+    <div class="container" style="text-align: center;">
+        <img src="images/appicon.png" alt="Metronome Hero" style="width: 80px; height: 80px; border-radius: 18px; margin-bottom: 1.5rem; box-shadow: 0 0 40px rgba(52, 211, 153, 0.15);">
+        <h2>Practice with precision. Level up for real.</h2>
+        <p style="max-width: 500px; margin: 1rem auto 2rem;">iPhone, iPad, Mac, Apple Watch, and AUv3 plugin. Includes a 7-day trial; subscription unlocks full app features and AUv3 access.</p>
+        <a href="https://apps.apple.com/us/app/metronome-hero/id6759626022" aria-label="Download on the App Store">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" style="height: 54px; width: auto;">
+        </a>
+    </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="https://audiokitpro.com">AudioKit Pro</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="mailto:support@metronomehero.com">Contact</a>
+        </div>
+        <p>&copy; 2026 AudioKit Pro. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
