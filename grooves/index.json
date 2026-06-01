@@ -1,0 +1,181 @@
+{
+  "version" : 1,
+  "grooves" : [
+    {
+      "description" : "Kick on every beat with backbeat snare — the foundation of house and dance music. Quarter-note scoring grid.",
+      "category" : "Dance",
+      "id" : "four-on-the-floor-1-4",
+      "file" : "four-on-the-floor-1-4.mid",
+      "name" : "Four on the Floor (1/4)",
+      "bpm" : 120
+    },
+    {
+      "description" : "Kick on every beat with backbeat snare. Eighth-note scoring grid for tighter timing.",
+      "bpm" : 120,
+      "category" : "Dance",
+      "name" : "Four on the Floor (1/8)",
+      "id" : "four-on-the-floor-1-8",
+      "file" : "four-on-the-floor-1-8.mid"
+    },
+    {
+      "id" : "four-on-the-floor-1-16",
+      "bpm" : 120,
+      "name" : "Four on the Floor (1/16)",
+      "category" : "Dance",
+      "description" : "Kick on every beat with backbeat snare. Sixteenth-note scoring grid for the strictest timing.",
+      "file" : "four-on-the-floor-1-16.mid"
+    },
+    {
+      "bpm" : 100,
+      "name" : "Basic Rock (1/4)",
+      "file" : "basic-rock-1-4.mid",
+      "id" : "basic-rock-1-4",
+      "category" : "Rock & Pop",
+      "description" : "Kick on 1 & 3, snare on 2 & 4, driving eighth-note hi-hats. Quarter-note scoring grid."
+    },
+    {
+      "file" : "basic-rock-1-8.mid",
+      "name" : "Basic Rock (1/8)",
+      "description" : "The essential rock beat: kick on 1 & 3, snare on 2 & 4, eighth-note hi-hats.",
+      "id" : "basic-rock-1-8",
+      "category" : "Rock & Pop",
+      "bpm" : 100
+    },
+    {
+      "file" : "basic-rock-1-16.mid",
+      "name" : "Basic Rock (1/16)",
+      "description" : "The essential rock beat with a sixteenth-note scoring grid for precise timing work.",
+      "id" : "basic-rock-1-16",
+      "category" : "Rock & Pop",
+      "bpm" : 100
+    },
+    {
+      "file" : "half-time.mid",
+      "name" : "Half-Time",
+      "description" : "Snare moved to beat 3 for a wide, spacious half-time feel.",
+      "id" : "half-time",
+      "category" : "Rock & Pop",
+      "bpm" : 90
+    },
+    {
+      "file" : "disco.mid",
+      "name" : "Disco",
+      "description" : "Four-on-the-floor kick, backbeat snare and steady sixteenth-note hi-hats.",
+      "id" : "disco",
+      "category" : "Dance",
+      "bpm" : 118
+    },
+    {
+      "file" : "boom-bap.mid",
+      "name" : "Boom Bap",
+      "description" : "Classic laid-back hip-hop backbeat with a kick on the 'and' of 3.",
+      "id" : "boom-bap",
+      "category" : "Hip-Hop",
+      "bpm" : 90
+    },
+    {
+      "file" : "behind-the-beat-1-8.mid",
+      "name" : "Behind the Beat (1/8)",
+      "description" : "Straight eighth-note rock pattern where every scoring quantum sits slightly behind the click — practice playing in the pocket.",
+      "id" : "behind-the-beat-1-8",
+      "category" : "Feel & Timing",
+      "bpm" : 95
+    },
+    {
+      "file" : "behind-the-beat-1-16.mid",
+      "name" : "Behind the Beat (1/16)",
+      "description" : "Same laid-back drag on a sixteenth-note grid.",
+      "id" : "behind-the-beat-1-16",
+      "category" : "Feel & Timing",
+      "bpm" : 95
+    },
+    {
+      "file" : "linn-shuffle-1-16.mid",
+      "name" : "Linn Shuffle (1/16)",
+      "description" : "The classic 58% MPC/Linn swing on sixteenths — that unmistakable hip-hop bounce.",
+      "id" : "linn-shuffle-1-16",
+      "category" : "Hip-Hop",
+      "bpm" : 88
+    },
+    {
+      "file" : "shuffle.mid",
+      "name" : "Shuffle",
+      "description" : "Triplet-based swing feel — the off-beats land on the triplet.",
+      "id" : "shuffle",
+      "category" : "Feel & Timing",
+      "bpm" : 100
+    },
+    {
+      "file" : "tresillo.mid",
+      "name" : "Tresillo",
+      "description" : "The 3+3+2 Afro-Cuban rhythm at the heart of countless Latin and pop grooves.",
+      "id" : "tresillo",
+      "category" : "Latin & World",
+      "bpm" : 100
+    },
+    {
+      "file" : "habanera.mid",
+      "name" : "Habanera",
+      "description" : "The dotted Cuban dance rhythm made famous by Bizet's Carmen.",
+      "id" : "habanera",
+      "category" : "Latin & World",
+      "bpm" : 96
+    },
+    {
+      "file" : "bossa-clave.mid",
+      "name" : "Bossa Clave",
+      "description" : "The two-bar bossa nova clave pattern played on claves.",
+      "id" : "bossa-clave",
+      "category" : "Latin & World",
+      "bpm" : 130
+    },
+    {
+      "file" : "bossa-nova.mid",
+      "name" : "Bossa Nova",
+      "description" : "Cross-stick on the clave, syncopated kick and steady eighth-note hi-hats.",
+      "id" : "bossa-nova",
+      "category" : "Latin & World",
+      "bpm" : 130
+    },
+    {
+      "file" : "reggae-one-drop.mid",
+      "name" : "Reggae (One Drop)",
+      "description" : "Kick and snare together on beat 3 with off-beat skank — the one-drop feel.",
+      "id" : "reggae-one-drop",
+      "category" : "Latin & World",
+      "bpm" : 75
+    },
+    {
+      "file" : "subdivision-drill.mid",
+      "name" : "Subdivision Drill",
+      "description" : "An accelerating drill: quarters, then eighths, then a run of sixteenths in one bar.",
+      "id" : "subdivision-drill",
+      "category" : "Practice Drills",
+      "bpm" : 80
+    },
+    {
+      "file" : "straight-to-swing.mid",
+      "name" : "Straight to Swing",
+      "description" : "Beats 1–2 play straight eighths, beats 3–4 swing — drill for switching feels mid-bar.",
+      "id" : "straight-to-swing",
+      "category" : "Practice Drills",
+      "bpm" : 100
+    },
+    {
+      "file" : "subdivision-pyramid.mid",
+      "name" : "Subdivision Pyramid",
+      "description" : "The note-value pyramid: a quarter, two eighths, an eighth-note triplet, then four sixteenths.",
+      "id" : "subdivision-pyramid",
+      "category" : "Practice Drills",
+      "bpm" : 80
+    },
+    {
+      "file" : "half-time-shuffle.mid",
+      "name" : "Half-Time Shuffle",
+      "description" : "Shuffled hi-hats with a half-time backbeat — the 'Rosanna' feel.",
+      "id" : "half-time-shuffle",
+      "category" : "Rock & Pop",
+      "bpm" : 90
+    }
+  ]
+}
