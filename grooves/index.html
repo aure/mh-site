@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groove Library — Metronome Hero</title>
+    <meta name="description" content="A growing library of practice grooves for Metronome Hero — rock, hip-hop, Latin, shuffle feels and subdivision drills. Browse the notation and load them straight into the app.">
+    <link rel="icon" type="image/png" href="../images/appicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .groove-intro { text-align: center; margin-bottom: 3rem; }
+        .groove-category { margin: 3rem 0 1.25rem; }
+        .groove-category h2 { font-size: 1.4rem; }
+        .groove-category .rule {
+            height: 1px; background: rgba(255,255,255,0.08); margin-top: 0.75rem;
+        }
+        .groove-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+        .groove-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .groove-card:hover { transform: translateY(-4px); border-color: rgba(52,211,153,0.25); }
+        .groove-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; }
+        .groove-card-head h3 { font-size: 1.1rem; }
+        .groove-bpm {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent);
+            background: rgba(52,211,153,0.1);
+            padding: 0.15rem 0.5rem;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+        .groove-desc { font-size: 0.9rem; margin: 0; }
+        /* Notation renders as black ink — give it a light "paper" surface. */
+        .groove-notation {
+            background: #faf9f6;
+            border-radius: 8px;
+            padding: 0.5rem 0.25rem;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .groove-notation svg { max-width: 100%; height: auto; display: block; }
+        .groove-notation .placeholder { color: #999; font-size: 0.85rem; font-style: italic; }
+        .groove-actions { display: flex; gap: 0.6rem; margin-top: auto; }
+        .groove-actions .btn { font-size: 0.85rem; padding: 0.5rem 0.9rem; }
+        .groove-status { text-align: center; color: var(--text-dim); padding: 2rem; }
+        .groove-status.error { color: #f87171; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <a href="../" class="nav-brand">
+            <img src="../images/appicon.png" alt="Metronome Hero icon">
+            Metronome Hero
+        </a>
+        <ul class="nav-links">
+            <li><a href="../play/" class="nav-demo">Demo</a></li>
+            <li><a href="./">Grooves</a></li>
+            <li><a href="../">Home</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero" style="padding-top: 7rem; padding-bottom: 2rem;">
+    <div class="container">
+        <div class="groove-intro">
+            <span class="section-label">Groove Library</span>
+            <h1>Learn to <span>groove.</span></h1>
+            <p class="hero-tagline" style="margin-left:auto;margin-right:auto;">
+                Custom grooves replace the uniform metronome grid with real feels — backbeats, shuffles,
+                clave patterns and subdivision drills. Browse them below, then open
+                <strong>Grooves → Browse Grooves</strong> in the app to download any of them with a tap.
+            </p>
+            <p style="font-size:0.95rem;margin-top:1rem;">
+                This list keeps growing. Have an idea for a groove?
+                <a href="mailto:support@metronomehero.com?subject=Groove%20idea">Send it over.</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section style="padding-top:1rem;">
+    <div class="container">
+        <div id="groove-status" class="groove-status">Loading the groove library…</div>
+        <div id="groove-root"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="https://audiokitpro.com">AudioKit Pro</a>
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <a href="../terms-of-service.html">Terms of Service</a>
+            <a href="mailto:support@metronomehero.com">Contact</a>
+        </div>
+        <p>&copy; 2026 AudioKit Pro. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+let vrvToolkit = null;
+function onVerovioReady() {
+    vrvToolkit = new verovio.toolkit();
+    vrvToolkit.setOptions({
+        scale: 38,
+        pageHeight: 600,
+        pageWidth: 2100,
+        pageMarginTop: 0,
+        pageMarginBottom: 0,
+        pageMarginLeft: 5,
+        pageMarginRight: 5,
+        adjustPageHeight: true,
+        breaks: "none",
+        footer: "none",
+        header: "none",
+        font: "Bravura"
+    });
+    buildLibrary();
+}
+</script>
+<script src="verovio-toolkit-wasm.js" onload="verovio.module.onRuntimeInitialized = onVerovioReady;"></script>
+
+<script>
+function el(tag, props = {}, children = []) {
+    const node = document.createElement(tag);
+    Object.assign(node, props);
+    for (const c of [].concat(children)) {
+        node.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+    }
+    return node;
+}
+
+async function renderNotation(container, file) {
+    try {
+        const res = await fetch(file);
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const xml = await res.text();
+        vrvToolkit.loadData(xml);
+        container.innerHTML = vrvToolkit.renderToSVG(1);
+    } catch (e) {
+        container.innerHTML = '<span class="placeholder">Notation unavailable</span>';
+    }
+}
+
+async function buildLibrary() {
+    const statusEl = document.getElementById("groove-status");
+    const root = document.getElementById("groove-root");
+    let catalog;
+    try {
+        const res = await fetch("index.json", { cache: "no-cache" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        catalog = await res.json();
+    } catch (e) {
+        statusEl.textContent = "Couldn't load the groove library. Please try again later.";
+        statusEl.classList.add("error");
+        return;
+    }
+
+    const entries = catalog.grooves || [];
+    if (!entries.length) {
+        statusEl.textContent = "No grooves published yet — check back soon.";
+        return;
+    }
+    statusEl.style.display = "none";
+
+    // Group by category, preserving catalog order.
+    const order = [];
+    const buckets = {};
+    for (const entry of entries) {
+        const key = entry.category && entry.category.length ? entry.category : "Grooves";
+        if (!buckets[key]) { buckets[key] = []; order.push(key); }
+        buckets[key].push(entry);
+    }
+
+    const renderQueue = [];
+    for (const category of order) {
+        const head = el("div", { className: "groove-category" }, [
+            el("h2", { textContent: category }),
+            el("div", { className: "rule" })
+        ]);
+        root.appendChild(head);
+
+        const grid = el("div", { className: "groove-grid" });
+        for (const entry of buckets[category]) {
+            const notation = el("div", { className: "groove-notation" }, [
+                el("span", { className: "placeholder", textContent: "Rendering…" })
+            ]);
+            const bpm = entry.bpm ? el("span", { className: "groove-bpm", textContent: "≈ " + entry.bpm + " BPM" }) : "";
+            const card = el("div", { className: "groove-card" }, [
+                el("div", { className: "groove-card-head" }, [
+                    el("h3", { textContent: entry.name }),
+                    bpm
+                ].filter(Boolean)),
+                entry.description ? el("p", { className: "groove-desc", textContent: entry.description }) : "",
+                notation,
+                el("div", { className: "groove-actions" }, [
+                    el("a", { className: "btn btn-secondary", href: entry.file, download: "" , textContent: "Download MIDI" })
+                ])
+            ].filter(Boolean));
+            grid.appendChild(card);
+            renderQueue.push([notation, entry.id + ".musicxml"]);
+        }
+        root.appendChild(grid);
+    }
+
+    // Render notation one at a time so a single Verovio toolkit handles all scores.
+    for (const [container, file] of renderQueue) {
+        await renderNotation(container, file);
+    }
+}
+</script>
+
+</body>
+</html>

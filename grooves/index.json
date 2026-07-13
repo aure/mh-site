@@ -176,6 +176,30 @@
       "id" : "half-time-shuffle",
       "category" : "Rock & Pop",
       "bpm" : 90
+    },
+    {
+      "file" : "qfg-3beat-var1.mid",
+      "name" : "3 Beat Variation #1",
+      "description" : "Eighth-note groove with kicks on 3, 3a, 4, 4a and open hi-hat on 4a.",
+      "id" : "qfg-3beat-var1",
+      "category" : "Quest For Groove",
+      "bpm" : 90
+    },
+    {
+      "file" : "qfg-3beat-var2.mid",
+      "name" : "3 Beat Variation #2",
+      "description" : "Sixteenth-note groove with kick on 1, 1e, 3e and accented hi-hats on beat 3.",
+      "id" : "qfg-3beat-var2",
+      "category" : "Quest For Groove",
+      "bpm" : 90
+    },
+    {
+      "file" : "qfg-3beat-var3.mid",
+      "name" : "3 Beat Variation #3",
+      "description" : "Sixteenth-note groove with ghost snare on 2& and open hi-hat on 4&.",
+      "id" : "qfg-3beat-var3",
+      "category" : "Quest For Groove",
+      "bpm" : 90
     }
   ]
 }

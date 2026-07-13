@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<score-partwise version="4.0">
+  <part-list>
+    <score-part id="P1"><part-name print-object="no">Drums</part-name></score-part>
+  </part-list>
+  <part id="P1">
+    <measure number="1">
+      <attributes>
+        <divisions>4</divisions>
+        <time><beats>4</beats><beat-type>4</beat-type></time>
+        <clef><sign>percussion</sign><line>2</line></clef>
+      </attributes>
+      <note>
+        <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <notehead>x</notehead>
+      </note>
+      <note>
+        <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <notehead>x</notehead>
+        <beam number="1">begin</beam>
+      </note>
+      <note>
+        <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <notehead>x</notehead>
+        <beam number="1">end</beam>
+      </note>
+      <note>
+        <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <notehead>x</notehead>
+        <beam number="1">begin</beam>
+        <beam number="2">forward hook</beam>
+      </note>
+      <note>
+        <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <notehead>x</notehead>
+        <beam number="1">continue</beam>
+      </note>
+      <note>
+        <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <notehead>x</notehead>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+      </note>
+      <note>
+        <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <notehead>x</notehead>
+        <beam number="1">begin</beam>
+        <beam number="2">begin</beam>
+      </note>
+      <note>
+        <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <notehead>x</notehead>
+        <beam number="1">continue</beam>
+        <beam number="2">continue</beam>
+      </note>
+      <note>
+        <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <notehead>x</notehead>
+        <beam number="1">continue</beam>
+        <beam number="2">continue</beam>
+      </note>
+      <note>
+        <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <notehead>x</notehead>
+        <beam number="1">end</beam>
+        <beam number="2">end</beam>
+      </note>
+    </measure>
+  </part>
+</score-partwise>
