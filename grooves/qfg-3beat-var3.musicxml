@@ -55,6 +55,14 @@
         <notehead>x</notehead>
       </note>
       <note>
+        <chord/>
+        <unpitched><display-step>C</display-step><display-octave>5</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note>
         <rest/>
         <duration>1</duration>
         <voice>1</voice>
@@ -77,11 +85,10 @@
         <stem>up</stem>
       </note>
       <note>
-        <unpitched><display-step>F</display-step><display-octave>4</display-octave></unpitched>
+        <rest/>
         <duration>1</duration>
         <voice>1</voice>
         <type>16th</type>
-        <stem>up</stem>
       </note>
       <note>
         <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
@@ -90,6 +97,14 @@
         <type>16th</type>
         <stem>up</stem>
         <notehead>x</notehead>
+      </note>
+      <note>
+        <chord/>
+        <unpitched><display-step>F</display-step><display-octave>4</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
       </note>
       <note>
         <rest/>
@@ -122,20 +137,20 @@
         <notehead>x</notehead>
       </note>
       <note>
-        <chord/>
-        <unpitched><display-step>F</display-step><display-octave>4</display-octave></unpitched>
-        <duration>1</duration>
-        <voice>1</voice>
-        <type>16th</type>
-        <stem>up</stem>
-      </note>
-      <note>
         <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
         <duration>1</duration>
         <voice>1</voice>
         <type>16th</type>
         <stem>up</stem>
         <notehead>x</notehead>
+      </note>
+      <note>
+        <chord/>
+        <unpitched><display-step>C</display-step><display-octave>5</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
       </note>
       <note>
         <chord/>
@@ -212,6 +227,14 @@
         <notehead>x</notehead>
       </note>
       <note>
+        <chord/>
+        <unpitched><display-step>C</display-step><display-octave>5</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note>
         <rest/>
         <duration>1</duration>
         <voice>1</voice>
@@ -234,11 +257,10 @@
         <stem>up</stem>
       </note>
       <note>
-        <unpitched><display-step>F</display-step><display-octave>4</display-octave></unpitched>
+        <rest/>
         <duration>1</duration>
         <voice>1</voice>
         <type>16th</type>
-        <stem>up</stem>
       </note>
       <note>
         <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
@@ -247,6 +269,14 @@
         <type>16th</type>
         <stem>up</stem>
         <notehead>x</notehead>
+      </note>
+      <note>
+        <chord/>
+        <unpitched><display-step>F</display-step><display-octave>4</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
       </note>
       <note>
         <rest/>
@@ -279,20 +309,20 @@
         <notehead>x</notehead>
       </note>
       <note>
-        <chord/>
-        <unpitched><display-step>F</display-step><display-octave>4</display-octave></unpitched>
-        <duration>1</duration>
-        <voice>1</voice>
-        <type>16th</type>
-        <stem>up</stem>
-      </note>
-      <note>
         <unpitched><display-step>G</display-step><display-octave>5</display-octave></unpitched>
         <duration>1</duration>
         <voice>1</voice>
         <type>16th</type>
         <stem>up</stem>
         <notehead>x</notehead>
+      </note>
+      <note>
+        <chord/>
+        <unpitched><display-step>C</display-step><display-octave>5</display-octave></unpitched>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
       </note>
       <note>
         <chord/>
