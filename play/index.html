@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metronome Hero - Play</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../images/icon.png" type="image/png">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="nav-brand">
+                <img src="../images/appicon.png" alt="Metronome Hero icon">
+                Metronome Hero
+            </a>
+            <ul class="nav-links">
+                <li><a href="./" class="nav-demo">Demo</a></li>
+                <li><a href="../grooves/">Grooves</a></li>
+                <li><a href="../">Home</a></li>
+            </ul>
+            <div id="tempo-display">
+                <button id="tempo-down" class="tempo-btn">-</button>
+                <span id="tempo-value">80</span>
+                <span class="tempo-unit">BPM</span>
+                <button id="tempo-up" class="tempo-btn">+</button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="app">
+
+        <main>
+            <div id="visualization-container">
+                <canvas id="viz-canvas"></canvas>
+                <div id="stats-overlay">
+                    <div id="streak-display">
+                        <span class="label">Streak</span>
+                        <span id="streak-value">0</span>
+                    </div>
+                    <div id="accuracy-display">
+                        <span class="label">Accuracy</span>
+                        <span id="accuracy-value">--%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="controls">
+                <button id="play-btn" class="primary-btn">
+                    <span class="play-icon">&#9658;</span>
+                    <span class="stop-icon">&#9632;</span>
+                </button>
+            </div>
+
+            <div id="settings-panel">
+                <div class="setting-group">
+                    <label>Visualization</label>
+                    <select id="viz-select">
+                        <option value="playhead">Playhead</option>
+                        <option value="scrolling">Scrolling History</option>
+                        <option value="highway">Note Highway</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label>Difficulty</label>
+                    <select id="difficulty-select">
+                        <option value="beginner">Beginner</option>
+                        <option value="easy">Easy</option>
+                        <option value="moderate" selected>Moderate</option>
+                        <option value="hard">Hard</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label>Subdivision</label>
+                    <select id="subdivision-select">
+                        <option value="1">Quarter Notes</option>
+                        <option value="2">Eighth Notes</option>
+                        <option value="3">Triplets</option>
+                        <option value="4">Sixteenth Notes</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label>Time Signature</label>
+                    <select id="timesig-select">
+                        <option value="4">4/4</option>
+                        <option value="3">3/4</option>
+                        <option value="6">6/8</option>
+                        <option value="5">5/4</option>
+                        <option value="7">7/8</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label>Click Sound</label>
+                    <select id="sound-select">
+                        <option value="click">Click</option>
+                        <option value="woodblock">Wood Block</option>
+                        <option value="hihat">Hi-Hat</option>
+                        <option value="cowbell">Cowbell</option>
+                        <option value="claves">Claves</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label>Input</label>
+                    <div id="input-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="input-keyboard" checked>
+                            Keyboard (Space/Enter)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="input-mouse" checked>
+                            Mouse/Touch
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label>Volume</label>
+                    <input type="range" id="volume-slider" min="0" max="100" value="70">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p class="footer-tagline">Tap in time with the beat.</p>
+            <div class="app-promo">
+                <p><a href="../" class="app-link">Get the full app</a> for iOS and Mac with:</p>
+                <ul class="feature-list">
+                    <li>Dynamic tempo adjustment (auto level up/down)</li>
+                    <li>Consistency tracking in addition to accuracy</li>
+                    <li>Session history and progress over time</li>
+                    <li>Custom grooves with drum patterns</li>
+                    <li>MIDI input from drums and controllers</li>
+                    <li>Band Sync and Apple Watch</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

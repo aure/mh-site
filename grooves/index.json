@@ -180,7 +180,7 @@
     {
       "file" : "qfg-3beat-var1.mid",
       "name" : "3 Beat Variation #1",
-      "description" : "Eighth-note groove with backbeat snare, kicks on 1, 3, 3a, 4a, and open hi-hat on 4a.",
+      "description" : "From <a href=\"https://questforgroove.com\">questforgroove.com</a>",
       "id" : "qfg-3beat-var1",
       "category" : "Quest For Groove",
       "bpm" : 90
@@ -188,7 +188,7 @@
     {
       "file" : "qfg-3beat-var2.mid",
       "name" : "3 Beat Variation #2",
-      "description" : "Sixteenth-note groove with kicks on 1, 1a, 3 and soft hi-hats on 3e, 3a.",
+      "description" : "From <a href=\"https://questforgroove.com\">questforgroove.com</a>",
       "id" : "qfg-3beat-var2",
       "category" : "Quest For Groove",
       "bpm" : 90
@@ -196,7 +196,7 @@
     {
       "file" : "qfg-3beat-var3.mid",
       "name" : "3 Beat Variation #3",
-      "description" : "Sixteenth-note groove with ghost snare on 2&, kicks on 1, 3, 3&, 4, and open hi-hat on 4&.",
+      "description" : "From <a href=\"https://questforgroove.com\">questforgroove.com</a>",
       "id" : "qfg-3beat-var3",
       "category" : "Quest For Groove",
       "bpm" : 90

@@ -208,7 +208,7 @@ async function buildLibrary() {
                     el("h3", { textContent: entry.name }),
                     bpm
                 ].filter(Boolean)),
-                entry.description ? el("p", { className: "groove-desc", textContent: entry.description }) : "",
+                entry.description ? el("p", { className: "groove-desc", innerHTML: entry.description }) : "",
                 notation,
                 el("div", { className: "groove-actions" }, [
                     el("a", { className: "btn btn-secondary", href: entry.file, download: "" , textContent: "Download MIDI" })
