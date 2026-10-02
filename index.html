@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metronome Hero — The Metronome That Listens Back</title>
-    <meta name="description" content="Train your timing with real-time visual feedback, adaptive tempo progression, and tap, mic, or MIDI input — on iPhone, iPad, Mac, Apple Watch, and inside your DAW.">
+    <meta name="description" content="Train your timing with real-time visual feedback, per-note colors and stats, multi-bar groove sequences, adaptive tempo progression, and tap, mic, or MIDI input — on iPhone, iPad, Mac, Apple Watch, and inside your DAW.">
     <link rel="icon" type="image/png" href="images/appicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -89,7 +89,31 @@
             <img src="images/playhead.png" alt="Playhead view showing color-coded hit bars across the timing spectrum">
         </div>
 
-        <div class="tip-callout">
+        <div class="section-header" style="margin-top: 4.5rem;">
+            <span class="section-label">Color by Note</span>
+            <h2>Which drum is rushing?</h2>
+            <p>Score the whole kit at once and still know which piece is early. Over MIDI, every note you play gets its own color &mdash; in every visualization, in the Audio Unit, and in your saved history.</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">🎨</div>
+                <h3>A color per pad</h3>
+                <p>Each pad, drum, or string picks up its own color the first time it appears in a session. One glance at the Note Highway tells you the hi-hat is pushing while the kick sits right in the pocket.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📊</div>
+                <h3>Numbers, not impressions</h3>
+                <p>A table breaks down your ten most-played notes: how many times you hit each one, how far early or late it lands on average in milliseconds, and how much it varies. Bias is the thing you can fix today. Spread is the thing you practice for.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🏷️</div>
+                <h3>Named for your instrument</h3>
+                <p>Play a kit and you get drum names; play a guitar or a keyboard and you get pitch names. Rename any of them so the table reads the way your own setup is laid out.</p>
+            </div>
+        </div>
+
+        <div class="tip-callout" style="margin-top: 2.5rem;">
             <h4>Play musically, not mechanically</h4>
             <p>Setting the quantization to sixteenths doesn&rsquo;t mean you have to play every sixteenth note. Play your own rhythms &mdash; long notes, short notes, rests, syncopation. Metronome Hero only scores the notes you actually play. Take a breath, leave space, be musical. All that matters is that when you do play, you&rsquo;re on beat.</p>
         </div>
@@ -115,7 +139,7 @@
             </div>
             <div class="feature-card">
                 <h3>Accuracy &amp; Consistency</h3>
-                <p>Two independent metrics track your playing. Accuracy measures how close each hit lands to the beat. Consistency measures how steady you are over time. Five difficulty levels &mdash; from Chill to Pro &mdash; tighten both thresholds.</p>
+                <p>Two independent metrics track your playing. Accuracy measures how close each hit lands to the beat. Consistency compares each hit with the one before it, so a steady lag still scores well while alternating early and late does not. Six difficulty levels &mdash; Chill, Easy, Mid, Hard, Pro, and Elite &mdash; tighten both thresholds.</p>
             </div>
             <div class="feature-card">
                 <h3>Musical Tap Sounds</h3>
@@ -240,6 +264,10 @@
                 <h3>Interval Training for Rhythm</h3>
                 <p>Combine level up with level down and you get interval training &mdash; the tempo pushes you to your edge, backs off to let you recover, then pushes again. Your comfortable tempo climbs session after session.</p>
             </div>
+            <div class="feature-card" style="grid-column: 1 / -1;">
+                <h3>Goal Tempo</h3>
+                <p>Working up to 120 for a specific piece? Set it as your goal and automatic level-ups stop there instead of climbing forever. The last step lands exactly on the number, a Goal Reached card turns up in your session summary, and manual and tap tempo stay unrestricted.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -270,6 +298,7 @@
                     <li>Rating distribution across all 7 zones</li>
                     <li>Tempo progression graph showing every level change</li>
                     <li>Accuracy, consistency, and difficulty settings</li>
+                    <li>A per-note breakdown over MIDI &mdash; which pad rushed, which dragged, and by how many milliseconds</li>
                     <li>Practice calendar stored on iCloud &mdash; tap on your phone on the way to work, clap on your iPad, play MIDI guitar on your Mac, and it all ends up in the same place</li>
                 </ul>
             </div>
@@ -298,14 +327,14 @@
                 <div class="mode-icon">&#127908;</div>
                 <div>
                     <h3>Audio</h3>
-                    <p>Use the built-in microphone or plug in your audio interface. Play drums, guitar, piano, voice &mdash; anything with a clear attack. Adaptive auto-gain handles sensitivity automatically, and latency calibration helps line up what you hear with what gets scored.</p>
+                    <p>Use the built-in microphone or plug in your audio interface. Play drums, guitar, piano, voice &mdash; anything with a clear attack. Adaptive auto-gain handles sensitivity automatically, and a calibration page measures the round trip from your speakers to your microphone so what you hear and what gets scored line up.</p>
                 </div>
             </div>
             <div class="input-mode">
                 <div class="mode-icon">&#127929;</div>
                 <div>
                     <h3>MIDI</h3>
-                    <p>Connect any MIDI controller via Bluetooth or USB. Keyboards, drum pads, electronic kits &mdash; play your own instrument and let Metronome Hero score your timing with the most direct input path.</p>
+                    <p>Connect any MIDI controller via Bluetooth or USB. Keyboards, drum pads, electronic kits &mdash; play your own instrument and let Metronome Hero score your timing with the most direct input path. A note range filter throws out the stray very-low and very-high notes that MIDI guitars and pads emit, and can learn the range from what you just played.</p>
                 </div>
             </div>
         </div>
@@ -340,7 +369,7 @@
             </div>
             <div class="challenge-item">
                 <h3>Practice Timer</h3>
-                <p>Set a countdown and the metronome stops automatically when time&rsquo;s up. Great for focused practice blocks &mdash; decide how long, then just play.</p>
+                <p>Set a countdown and the metronome stops automatically when time&rsquo;s up. Step it in whole minutes, reset it without leaving the screen, and otherwise just play.</p>
             </div>
         </div>
     </div>
@@ -352,14 +381,14 @@
         <div class="section-header">
             <span class="section-label">Custom Grooves</span>
             <h2>Practice to a real groove, not just a click</h2>
-            <p>Swap the uniform metronome grid for an actual feel. Grooves place the beat where the music does &mdash; laid-back backbeats, shuffles, clave patterns and subdivision drills &mdash; and score how tightly you lock in.</p>
+            <p>Swap the uniform metronome grid for an actual feel. Grooves place the beat where the music does &mdash; laid-back backbeats, shuffles, clave patterns and subdivision drills &mdash; and score how tightly you lock in. Chain bars into a sequence and you can practice a whole phrase, fill and all.</p>
         </div>
 
         <div class="feature-grid">
             <div class="feature-card">
                 <div class="icon">🥁</div>
                 <h3>Real feels, real notation</h3>
-                <p>Every groove is a one-bar drum pattern with its own scoring grid, shown in standard percussion notation so you know exactly what you&rsquo;re playing against.</p>
+                <p>Every groove is a bar-long drum pattern with its own scoring grid, shown in standard percussion notation so you know exactly what you&rsquo;re playing against.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">☁️</div>
@@ -367,9 +396,14 @@
                 <p>Browse grooves right inside the app under <strong>Grooves &rarr; Browse Grooves</strong> and download any of them with a tap. New grooves are added over time &mdash; no app update needed.</p>
             </div>
             <div class="feature-card">
+                <div class="icon">🔁</div>
+                <h3>Three bars, then a fill</h3>
+                <p>Sequences string bars together and cycle as you play, so the fill arrives where it should instead of never. Start one from any groove, set the order and the repeats, and edit any bar in the groove editor. Import a multi-bar MIDI or MusicXML file and it arrives as a sequence, bar for bar, with a preview before you commit.</p>
+            </div>
+            <div class="feature-card">
                 <div class="icon">✏️</div>
                 <h3>Make them your own</h3>
-                <p>Tweak any groove in the editor &mdash; move hits, change sounds, adjust the swing &mdash; or import your own MIDI. Your grooves sync across all your devices via iCloud.</p>
+                <p>Tweak any groove in the editor &mdash; move hits, change sounds, adjust the swing &mdash; or import your own MIDI. Snap to 16ths, 32nds, eighth- or sixteenth-note triplets, or place hits anywhere you like. Your grooves sync across all your devices via iCloud.</p>
             </div>
         </div>
 
@@ -647,6 +681,14 @@
             <div class="spec-item">
                 <span class="check">&#10003;</span>
                 <p>iCloud session sync across all devices</p>
+            </div>
+            <div class="spec-item">
+                <span class="check">&#10003;</span>
+                <p>Goal tempo &mdash; level up toward a target and stop there</p>
+            </div>
+            <div class="spec-item">
+                <span class="check">&#10003;</span>
+                <p>Per-note MIDI statistics: count, early/late bias, and spread</p>
             </div>
             <div class="spec-item">
                 <span class="check">&#10003;</span>
